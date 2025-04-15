@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-size: 100%;
 }
 
 body {
@@ -13,36 +12,75 @@ body {
     /* background-color: ; */
 }
 
+.scroll-aware {
+    /* Initial styles */
+    position: relative;
+    top: 200px;
+    transition: position 0.2s ease-in-out, top 0.2s ease-in-out;
+  }
+
+  .sticky {
+    position: fixed !important; /* Use !important for higher specificity */
+    top: 100px;
+    /* left: 0; */
+    width: 100%; /* Adjust as needed */
+    z-index: 10;
+    /* Add any other sticky styles */
+    background-color: #008080; /* Example */
+  }
+
+  .content {
+    margin-top: 10rem;
+    /* Adjust this value to create space for the sticky header */
+    padding: 20px;
+    /* Add padding or other styles as needed */
+  }
+
+
+
+
+.header_title {
+    position: fixed !important;
+    /* Use !important for higher specificity */
+    top: 30em;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+    text-decoration: underline 4px;
+    font-size: 8rem;
+    background-color: #008080;
+    /* margin-bottom: 20px; */
+    /* animation: move_top_title 1s; */
+    transition: position 0.2s ease-in-out, top 0.2s ease-in-out;
+
+}
+
+.title {
+
+
+    position: fixed !important;
+    /* Use !important for higher specificity */
+    top: 30em;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+    text-decoration: underline 4px;
+    font-size: 8rem;
+    background-color: #008080;
+    /* margin-bottom: 20px; */
+    /* animation: move_top_title 1s; */
+    transition: position 0.2s ease-in-out, top 0.2s ease-in-out;
+}
 
 /* .header_title {
     position: sticky;
-    top: 0;
-    justify-content: center; */
-/* background: #008080; */
-/* text-decoration: underline 4px;
-    font-size: 8rem;
-    font-family: allura, cursive;
-    color: #008080; */
-/* margin-bottom: 20px; */
-/* padding-top: 10px; */
-/* border: 2px solid #191a1a; */
-/* z-index: 10; */
-/* animation: move_top_title 1s; */
-/* } */
 
-.title {
-    position: sticky;
-    top: 0;
-    justify-content: center;
-    text-decoration: underline 4px;
-    font-family: allura, cursive;
-    color: #008080;
-}
-
-.header_title {
-
-    font-size:8vw;
-}
+    margin-top: 3rem;
+    font-size: 8vw;
+    background-color: #008080;
+} */
 
 .shrink {
     position: fixed;
@@ -65,11 +103,11 @@ body {
 }
 
 .hero_picture {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    width: 40%;
-    height: 25%;
+    /* position: relative; */
+    /* display: block; */
+    /* margin: 0 auto; */
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
 }
 
@@ -90,7 +128,7 @@ body {
     border-radius: 10px;
     float: left;
     width: 50%;
-    margin: 15px 15px 10px 20px ;
+    margin: 15px 15px 10px 20px;
 }
 
 .objetivos p {
@@ -167,16 +205,16 @@ body {
 
 @media screen and (min-width: 601px) {
     body {
-      font-size: 4.5vh;
-      /* margin-top: 3rem; */
-      
+        font-size: 4.5vh;
+        /* margin-top: 3rem; */
+
     }
 
     .objetivos {
         margin-top: 2rem;
     }
 
-    
+
 
     .objetivos h2 {
         /* display: flex; */
@@ -189,10 +227,10 @@ body {
         text-align: left;
         /* margin-top: 3rem; */
     }
-  }
-  
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 600px) {
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
     .objetivos {
         /* margin-bottom: 40px; */
         text-align: center;
@@ -201,12 +239,13 @@ body {
     .objetivos h2 {
         text-align: center;
     }
-    .objetivos p {
-    text-align: left;
-  }
 
-  .container_description {
-    position: relative;
-    box-sizing: content-box;
-  }
+    .objetivos p {
+        text-align: left;
+    }
+
+    .container_description {
+        position: relative;
+        box-sizing: content-box;
+    }
 }

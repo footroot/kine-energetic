@@ -1,3 +1,18 @@
+
+// This code is for a sticky header that becomes fixed at the top of the viewport when scrolled past a certain point.
+const stickyElement = document.getElementById('stickyElement');
+const stickyOffset = 100; // The scroll distance after which it becomes sticky
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= stickyOffset) {
+    stickyElement.classList.add('sticky');
+  } else {
+    stickyElement.classList.remove('sticky');
+  }
+});
+
+
+
 const checkpoint = 100;
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
